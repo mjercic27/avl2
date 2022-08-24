@@ -23,5 +23,5 @@ jobs:
         run: docker build -t service2 .
         
       - name: Push
-        run: docker image push service2
+        run: docker push service2
       
