@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       - name: Build 
-        run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/service2 .
+        run: docker build --cache-from ${{ secrets.DOCKER_HUB_USERNAME }}/service2:latest -t ${{ secrets.DOCKER_HUB_USERNAME }}/service2 .
         
       - name: Test
         run: echo "Test passed"
