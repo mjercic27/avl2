@@ -6,7 +6,7 @@ ENV fprocess="python entrypoint.py"
 COPY entrypoint.py /
 
 RUN apk add --update py3-pip
-RUN pip install requests
+RUN pip3 install requests
 
 EXPOSE 8080
 CMD [ "fwatchdog" ]
