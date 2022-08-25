@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.12
 ADD https://github.com/openfaas/faas/releases/download/0.6.5/fwatchdog /usr/bin/
 RUN chmod +x /usr/bin/fwatchdog
 
