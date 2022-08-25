@@ -55,7 +55,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/service2:latest, ${{ secrets.DOCKER_HUB_USERNAME }}/service2:v${{steps.semantic.outputs.new_release_major.version}}.${{steps.semantic.new_release_minor_version}}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/service2:latest, ${{ secrets.DOCKER_HUB_USERNAME }}/service2:v${{steps.semantic.outputs.new_release_major_version}}.${{steps.semantic.outputs.new_release_minor_version}}
           cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/service2:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/service2:buildcache,mode=max
           
