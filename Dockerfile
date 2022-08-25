@@ -8,5 +8,6 @@ COPY entrypoint.py /
 RUN apk add --update py-pip
 RUN pip install requests
 
+
 EXPOSE 8080
 CMD [ "fwatchdog" ]
