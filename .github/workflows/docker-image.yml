@@ -48,7 +48,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         
       - name: Push
-        if: steps.semantic.new_version_published == true
+        if: ${{steps.semantic.new_version_published}} == "true"
         uses: docker/build-push-action@v2
         with:
           context: ./
