@@ -1,7 +1,7 @@
 {
   "name": "avl1",
   "version": "0.0.0",
-  "repository": "https://github.com/mjercic27/avl1",
+  "repository": "https://github.com/mjercic27/avl2",
   "private": false,
   "release": {
     "branches": ["main"]
