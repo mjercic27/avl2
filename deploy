@@ -1,0 +1,9 @@
+#!/bin/bash
+version_service1=$1
+version_service2=$2  
+docker network create service-network
+docker run -d --hostname service.example.com --network service-network --name s1 marko2727/service1:$version_service1 
+docker run -d --network service-network --name s2 marko2727/service2:$version_service2
+
+
+
